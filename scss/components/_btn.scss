@@ -1,0 +1,15 @@
+.btn {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--very-light-gray);
+    background-image: var(--gradient-1);
+    padding: 0.8em 2em;
+    border-radius: 100px;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 75%;
+        transform: translateY(-2px);
+        box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 20%);
+    }
+}

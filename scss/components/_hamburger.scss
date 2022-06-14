@@ -1,0 +1,41 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    gap: 5px;
+
+    &:hover > span:nth-child(2) {
+        transform: translateX(5px);
+    }
+
+    &:hover > span {
+        background-color: var(--lime-green);
+    }
+
+    &.active > span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(10px);
+        visibility: hidden;
+    }
+
+    &.active > span:nth-child(1) {
+        transform: rotateZ(45deg) translateY(-6px);
+    }
+    &.active > span:nth-child(3) {
+        transform: rotateZ(-45deg) translateY(3px);
+    }
+
+    @include responsive(lg) {
+        display: none;
+    }
+
+    span {
+        width: 100%;
+        height: 2px;
+        background-color: var(--dark-blue);
+        transition: 0.3s;
+        transform-origin: 0 0;
+    }
+}

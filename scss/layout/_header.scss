@@ -1,0 +1,75 @@
+.header {
+    padding-bottom: 5rem;
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive(lg) {
+        padding-top: 13rem;
+        padding-bottom: 10rem;
+        background-image: url(/images/bg-intro-desktop.svg);
+        background-position-x: 700px;
+        background-position-y: -150px;
+        background-size: 80%;
+    }
+
+    &__container {
+        @include responsive(lg) {
+            display: flex;
+        }
+    }
+
+    &__img {
+        order: 2;
+        position: relative;
+
+        img {
+            width: 88%;
+            margin: 0 auto;
+            @include responsive(lg) {
+                position: absolute;
+                z-index: 0;
+                top: -300px;
+                right: -1000px;
+                width: 800px;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.7rem;
+
+        @include responsive(lg) {
+            align-items: start;
+            gap: 1.9rem;
+        }
+
+        h1,
+        p {
+            text-align: center;
+
+            @include responsive(lg) {
+                text-align: start;
+            }
+        }
+
+        p {
+            max-width: 50ch;
+            font-size: 0.9rem;
+
+            @include responsive(lg) {
+                font-size: 1rem;
+                font-size: 1rem;
+                line-height: 1.7em;
+            }
+        }
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: center;
+    }
+}

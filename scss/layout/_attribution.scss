@@ -1,0 +1,16 @@
+.attribution {
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 0.6em;
+    font-weight: 700;
+    background-image: var(--gradient-1);
+    color: var(--very-light-gray);
+
+    @include responsive(md) {
+        font-size: 0.8rem;
+    }
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

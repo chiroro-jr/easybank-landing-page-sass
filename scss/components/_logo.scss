@@ -1,0 +1,16 @@
+.logo {
+    display: grid;
+    place-content: center;
+
+    &--top {
+        color: var(--dark-blue);
+    }
+
+    &--bottom {
+        color: var(--white);
+
+        @include responsive(lg) {
+            align-self: start;
+        }
+    }
+}

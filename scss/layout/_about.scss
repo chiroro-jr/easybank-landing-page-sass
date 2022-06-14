@@ -1,0 +1,58 @@
+.about {
+    background-color: var(--light-grayish-blue);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &__container {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+
+        @include responsive(lg) {
+            justify-items: start;
+        }
+
+        & > h2 {
+            width: 15ch;
+            text-align: center;
+
+            @include responsive(lg) {
+                width: auto;
+                text-align: start;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.5em;
+
+            @include responsive(lg) {
+                max-width: 75ch;
+                font-size: 0.9rem;
+                text-align: start;
+            }
+        }
+
+        & > p {
+            padding-bottom: 0.7rem;
+
+            @include responsive(lg) {
+                padding-bottom: 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__features {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        column-gap: 2rem;
+        row-gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__feature {
+    }
+}
